@@ -11,6 +11,7 @@ stack_t *head;
 int main(int arc, char *arv[])
 {
 	FILE *fil;
+	stack_t *t;
 
 	if (arc != 2)
 	{
@@ -25,6 +26,16 @@ int main(int arc, char *arv[])
 	}
 	reado(fil);
 	fclose(fil);
+	if (!head)
+	{
+		return (0);
+	}
+	while (head)
+	{
+		t = head;
+		head = head->next;
+		free(t);
+	}
 	return (0);
 
 }
