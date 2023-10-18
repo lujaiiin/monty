@@ -113,6 +113,7 @@ void func(char *tok, char *val, int ln, int how)
 	instruction_t name[] = {
 		{"push", pushe},
 		{"pall", palle},
+		{"add", adde},
 		{"pint", pinte},
 		{"pop", pope},
 		{"nop", nope},

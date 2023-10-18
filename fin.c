@@ -36,3 +36,25 @@ void nope(stack_t **he, unsigned int ln)
 	(void) ln;
 	(void) he;
 }
+
+/**
+ * adde - function
+ * @he: value
+ * @ln: line number
+ */
+
+void adde(stack_t **he, unsigned int ln)
+{
+	int all;
+
+	if (!he || !*he || (*he)->next == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", ln);
+		exit(EXIT_FAILURE);
+	}
+	(*he) = (*he)->next;
+	all = (*he)->n + (*he)->prev->n;
+	(*he)->n = all;
+	free((*he)->prev);
+	(*he)->prev = NULL;
+}
