@@ -13,7 +13,7 @@ int same(char *s1, char *s2)
 }
 
 /**
- * funcall - function to call
+ * funcal - function to call
  * @fun: the fun name
  * @tok: the name
  * @val: the value
@@ -65,6 +65,7 @@ void funcal(op_func fun, char *tok, char *val, int ln, int how)
 /**
  * node - function
  * @k: value
+ * Return: always
  */
 
 stack_t *node(int k)
@@ -86,7 +87,7 @@ stack_t *node(int k)
 /**
  * addqu - fun
  * @ok: value
- * ln: value
+ * @ln: value
  */
 
 void addqu(stack_t **ok, unsigned int ln)

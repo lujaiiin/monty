@@ -1,9 +1,10 @@
 #include "monty.h"
 stack_t *head;
 /**
- * main - main function
- * arc - value num
- * arv - value arr
+ * main - function
+ * @arc: value num
+ * @arv: value arr
+ * Return: int
  */
 
 
@@ -31,7 +32,7 @@ int main(int arc, char *arv[])
 
 /**
  * reado - function to read a file
- * fd: the file path
+ * @fil: the file path
  */
 
 void reado(FILE *fil)
@@ -51,7 +52,7 @@ void reado(FILE *fil)
 /**
  * strtoke - function to take every single line
  * @buf: the bufferd to storage
- * @len: the line
+ * @ln: the line
  * @how: the format if 0 means stack if 1 means queue
  * Return: always
  */
@@ -95,7 +96,7 @@ int strtoke(char *buf, int ln, int how)
 void func(char *tok, char *val, int ln, int how)
 {
 	int i, fl;
-	
+
 	instruction_t name[] = {
 		{"push", pushe},
 		{"pall", palle},
