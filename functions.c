@@ -61,7 +61,7 @@ void pinte(stack_t **he, unsigned int ln)
 {
 	if (!*he || !he)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty", ln);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", ln);
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*he)->n);

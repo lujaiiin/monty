@@ -50,10 +50,10 @@ int main(int arc, char *arv[])
 void reado(FILE *fil)
 {
 	char *buf = NULL;
-	size_t len = 0;
+	size_t l = 0;
 	int ln = 1, how = 0;
 
-	while (getline(&buf, &len, fil) != -1)
+	while (getline(&buf, &l, fil) != -1)
 	{
 		how = strtoke(buf, ln, how);
 		ln++;
@@ -108,7 +108,7 @@ int strtoke(char *buf, int ln, int how)
 
 void func(char *tok, char *val, int ln, int how)
 {
-	int i, fl;
+	int i = 0, fl = 1;
 
 	instruction_t name[] = {
 		{"push", pushe},
@@ -123,8 +123,6 @@ void func(char *tok, char *val, int ln, int how)
 	{
 		return;
 	}
-	fl = 1;
-	i = 0;
 	while (name[i].opcode != NULL)
 	{
 		if (strcmp(tok, name[i].opcode) == 0)

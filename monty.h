@@ -2,12 +2,12 @@
 #define MONTY_H
 
 #define _GNU_SOURCE
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <stdarg.h>
-#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -40,14 +40,13 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+typedef void(*op)(stack_t **he, unsigned int ln);
 extern stack_t *head;
-typedef void(*op_func)(stack_t **, unsigned int);
 
 void func(char *tok, char *val, int ln, int how);
 int strtoke(char *buf, int ln, int how);
 void reado(FILE *fil);
-void funcal(op_func fun, char *tok, char *val, int ln, int how);
+void funcal(op fun, char *tok, char *val, int ln, int how);
 int same(char *s1, char *s2);
 void palle(stack_t **he, unsigned int ln);
 void pushe(stack_t **he, unsigned int ln);

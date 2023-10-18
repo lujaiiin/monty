@@ -21,12 +21,11 @@ int same(char *s1, char *s2)
  * @how: 0 or 1
  */
 
-void funcal(op_func fun, char *tok, char *val, int ln, int how)
+void funcal(op fun, char *tok, char *val, int ln, int how)
 {
 	int j = 0, fl = 1;
 	stack_t *ok;
 
-	(void)how;
 	if (same(tok, "push") == 0)
 	{
 		if (val && val[0] == '-')
