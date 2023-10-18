@@ -23,7 +23,7 @@ int same(char *s1, char *s2)
 
 void funcal(op_func fun, char *tok, char *val, int ln, int how)
 {
-	int j = 0, fl;
+	int j = 0, fl = 1;
 	stack_t *ok;
 
 	(void)how;
@@ -43,8 +43,8 @@ void funcal(op_func fun, char *tok, char *val, int ln, int how)
 			if (isdigit(val[j] == 0))
 			{
 				fprintf(stderr, "L%d: usage: push integer\n", ln);
-				j++;
 			}
+			j++;
 		}
 		ok = node(atoi(val) * fl);
 		if (how == 0)

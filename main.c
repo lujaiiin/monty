@@ -80,7 +80,6 @@ int strtoke(char *buf, int ln, int how)
 	{
 		return (0);
 	}
-
 	func(tok, val, ln, how);
 	return (how);
 }
@@ -96,10 +95,11 @@ int strtoke(char *buf, int ln, int how)
 void func(char *tok, char *val, int ln, int how)
 {
 	int i, fl;
-
+	
 	instruction_t name[] = {
 		{"push", pushe},
-		{"pall", palle}
+		{"pall", palle},
+		{NULL, NULL}
 	};
 
 	if (tok[0] == '#')
@@ -122,3 +122,4 @@ void func(char *tok, char *val, int ln, int how)
 		fprintf(stderr, "L%d: unknown instruction %s", ln, tok);
 	}
 }
+
