@@ -37,12 +37,14 @@ void funcal(op_func fun, char *tok, char *val, int ln, int how)
 		if (!val)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", ln);
+			exit(EXIT_FAILURE);
 		}
 		while (val[j] != '\0')
 		{
 			if (isdigit(val[j] == 0))
 			{
 				fprintf(stderr, "L%d: usage: push integer\n", ln);
+				exit(EXIT_FAILURE);
 			}
 			j++;
 		}
@@ -76,6 +78,7 @@ stack_t *node(int k)
 	if (ok == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 	ok->next = NULL;
 	ok->prev = NULL;

@@ -23,6 +23,7 @@ int main(int arc, char *arv[])
 	if (!arv[1] || !fil)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", arv[1]);
+		exit(EXIT_FAILURE);
 	}
 	reado(fil);
 	fclose(fil);
@@ -75,6 +76,7 @@ int strtoke(char *buf, int ln, int how)
 	if (!buf)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
 
 	tok = strtok(buf, "\n ");
@@ -133,6 +135,7 @@ void func(char *tok, char *val, int ln, int how)
 	if (fl == 1)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s", ln, tok);
+		exit(EXIT_FAILURE);
 	}
 }
 
