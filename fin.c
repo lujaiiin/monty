@@ -49,7 +49,7 @@ void adde(stack_t **he, unsigned int ln)
 
 	if (!he || !*he || (*he)->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", ln);
+		fprintf(stderr, "L%d: can't add, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
 	(*he) = (*he)->next;
