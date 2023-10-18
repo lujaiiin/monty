@@ -56,6 +56,7 @@ void pinte(stack_t **he, unsigned int ln);
 void pope(stack_t **he, unsigned int ln);
 void nope(stack_t **he, unsigned int ln);
 void adde(stack_t **he, unsigned int ln);
+void swape(stack_t **he, unsigned int ln);
 
 
 

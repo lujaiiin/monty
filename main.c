@@ -115,6 +115,7 @@ void func(char *tok, char *val, int ln, int how)
 		{"pall", palle},
 		{"add", adde},
 		{"pint", pinte},
+		{"swap", swape},
 		{"pop", pope},
 		{"nop", nope},
 		{NULL, NULL}
