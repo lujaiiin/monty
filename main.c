@@ -114,6 +114,7 @@ void func(char *tok, char *val, int ln, int how)
 		{"push", pushe},
 		{"pall", palle},
 		{"pint", pinte},
+		{"pop", pope},
 		{NULL, NULL}
 	};
 
@@ -134,7 +135,7 @@ void func(char *tok, char *val, int ln, int how)
 	}
 	if (fl == 1)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s", ln, tok);
+		fprintf(stderr, "L%d: unknown instruction %s\n", ln, tok);
 		exit(EXIT_FAILURE);
 	}
 }
