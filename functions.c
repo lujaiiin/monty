@@ -50,3 +50,18 @@ void palle(stack_t **he, unsigned int ln)
 		t = t->next;
 	}
 }
+
+/**
+ * pinte - function
+ * @he: value
+ * @ln: line number
+ */
+
+void pinte(stack_t **he, unsigned int ln)
+{
+	if (!*he || !he)
+	{
+		fprintf(stderr, "L%d: can't pint, stack empty", ln);
+	}
+	printf("%d\n", (*he)->n);
+}

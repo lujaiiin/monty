@@ -53,7 +53,7 @@ void palle(stack_t **he, unsigned int ln);
 void pushe(stack_t **he, unsigned int ln);
 void addqu(stack_t **ok, unsigned int ln);
 stack_t *node(int k);
-
+void pinte(stack_t **he, unsigned int ln);
 
 
 #endif
