@@ -55,6 +55,8 @@ void addqu(stack_t **ok, unsigned int ln);
 stack_t *node(int k);
 void pinte(stack_t **he, unsigned int ln);
 void pope(stack_t **he, unsigned int ln);
+void nope(stack_t **he, unsigned int ln);
+
 
 
 

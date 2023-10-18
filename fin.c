@@ -24,3 +24,15 @@ void pope(stack_t **he, unsigned int ln)
 	}
 	free(t);
 }
+
+/**
+ * nope - function
+ * @he: value
+ * @ln: line number
+ */
+
+void nope(stack_t **he, unsigned int ln)
+{
+	(void) ln;
+	(void) he;
+}
