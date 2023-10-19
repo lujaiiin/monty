@@ -48,10 +48,10 @@ void funcal(op fun, char *tok, char *val, int ln, int how)
 			j++;
 		}
 		ok = node(atoi(val) * fl);
-	/*	if (how == 0)
+		if (how == 0)
 		{
 			fun(&ok, ln);
-		}*/
+		}
 	}
 	else
 	{
