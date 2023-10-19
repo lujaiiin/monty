@@ -86,7 +86,7 @@ stack_t *node(int k)
  * addqu - fun
  * @ok: value
  * @ln: value
- */
+ 
 
 void addqu(stack_t **ok, unsigned int ln)
 {
@@ -110,4 +110,4 @@ void addqu(stack_t **ok, unsigned int ln)
 	}
 	t->next = *ok;
 	(*ok)->prev = t;
-}
+}*/
