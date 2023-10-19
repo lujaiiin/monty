@@ -81,33 +81,3 @@ stack_t *node(int k)
 
 	return (ok);
 }
-
-/**
- * addqu - fun
- * @ok: value
- * @ln: value
- 
-
-void addqu(stack_t **ok, unsigned int ln)
-{
-	stack_t *t;
-
-	(void) ln;
-
-	if (!ok || !*ok)
-	{
-		exit(EXIT_FAILURE);
-	}
-	if (head == NULL)
-	{
-		head = *ok;
-		return;
-	}
-	t = head;
-	for (; t->next != NULL;)
-	{
-		t = t->next;
-	}
-	t->next = *ok;
-	(*ok)->prev = t;
-}*/
