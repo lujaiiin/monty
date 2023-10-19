@@ -52,10 +52,10 @@ void funcal(op fun, char *tok, char *val, int ln, int how)
 		{
 			fun(&ok, ln);
 		}
-		if (how == 1)
+/**		if (how == 1)
 		{
 			addqu(&ok, ln);
-		}
+		}*/
 	}
 	else
 	{

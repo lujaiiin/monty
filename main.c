@@ -1,12 +1,12 @@
 #include "monty.h"
 stack_t *head;
+
 /**
  * main - function
  * @arc: value num
  * @arv: value arr
  * Return: int
  */
-
 
 int main(int arc, char *arv[])
 {
@@ -128,4 +128,3 @@ void func(char *tok, char *val, int ln, int how)
 		exit(EXIT_FAILURE);
 	}
 }
-
