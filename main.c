@@ -15,7 +15,6 @@ int main(int arc, char *arv[])
 
 	if (arc != 2)
 	{
-
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
@@ -38,7 +37,6 @@ int main(int arc, char *arv[])
 		free(t);
 	}
 	return (0);
-
 }
 
 
@@ -78,14 +76,12 @@ int strtoke(char *buf, int ln, int how)
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-
 	tok = strtok(buf, "\n ");
 	if (!tok)
 	{
 		return (how);
 	}
 	val = strtok(NULL, "\n ");
-
 	func(tok, val, ln, how);
 	return (how);
 }
@@ -113,9 +109,9 @@ void func(char *tok, char *val, int ln, int how)
 		{NULL, NULL}
 	};
 
-	while (name[i].opcode != NULL)
+	while (name[i].opcode)
 	{
-		if (strcmp(tok, name[i].opcode) == 0)
+		if (same(tok, name[i].opcode) == 0)
 		{
 			funcal(name[i].f, tok, val, ln, how);
 			fl = 0;

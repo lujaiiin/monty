@@ -78,6 +78,5 @@ stack_t *node(int k)
 	ok->next = NULL;
 	ok->prev = NULL;
 	ok->n = k;
-
 	return (ok);
 }

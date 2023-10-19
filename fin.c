@@ -15,7 +15,6 @@ void pope(stack_t **he, unsigned int ln)
 		fprintf(stderr, "L%d: can't pop an empty stack\n", ln);
 		exit(EXIT_FAILURE);
 	}
-
 	t = *he;
 	*he = t->next;
 	if (*he)
