@@ -67,14 +67,14 @@ void adde(stack_t **he, unsigned int ln)
 
 void swape(stack_t **he, unsigned int ln)
 {
-	stack_t *t;
+	int t;
 
 	if (!*he || !he || !(*he)->next)
 	{
-		fprintf(stderr, "L%d: can't swap, stack too short", ln);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
-
+/*
 	t = (*he)->next;
 	(*he)->next = t->next;
 	if (t->next)
@@ -84,5 +84,8 @@ void swape(stack_t **he, unsigned int ln)
 	t->next = *he;
 	(*he)->prev = t;
 	t->prev = NULL;
-	*he = t;
+	*he = t;*/
+	t = (*he)->n;
+	(*he)->n = (*he)->next->n;
+	(*he)->next->n = t;
 }
