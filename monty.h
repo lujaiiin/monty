@@ -40,7 +40,10 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+
 typedef void(*op)(stack_t **he, unsigned int ln);
+
+
 extern stack_t *head;
 
 void func(char *tok, char *val, int ln, int how);
@@ -48,17 +51,16 @@ int strtoke(char *buf, int ln, int how);
 void reado(FILE *fil);
 void funcal(op fun, char *tok, char *val, int ln, int how);
 int same(char *s1, char *s2);
+
+
 void palle(stack_t **he, unsigned int ln);
 void pushe(stack_t **he, unsigned int ln);
-void addqu(stack_t **ok, unsigned int ln);
 stack_t *node(int k);
 void pinte(stack_t **he, unsigned int ln);
 void pope(stack_t **he, unsigned int ln);
 void nope(stack_t **he, unsigned int ln);
 void adde(stack_t **he, unsigned int ln);
 void swape(stack_t **he, unsigned int ln);
-
-
 
 
 #endif
