@@ -85,7 +85,7 @@ int strtoke(char *buf, int ln, int how)
 		return (how);
 	}
 	val = strtok(NULL, "\n ");
-
+/*
 	if (same(tok, "queue") == 0)
 	{
 		return (1);
@@ -93,7 +93,7 @@ int strtoke(char *buf, int ln, int how)
 	if (same(tok, "stack") == 0)
 	{
 		return (0);
-	}
+	}*/
 	func(tok, val, ln, how);
 	return (how);
 }
@@ -120,11 +120,11 @@ void func(char *tok, char *val, int ln, int how)
 		{"nop", nope},
 		{NULL, NULL}
 	};
-
+/*
 	if (tok[0] == '#')
 	{
 		return;
-	}
+	}*/
 	while (name[i].opcode != NULL)
 	{
 		if (strcmp(tok, name[i].opcode) == 0)

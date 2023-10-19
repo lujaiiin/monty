@@ -74,17 +74,7 @@ void swape(stack_t **he, unsigned int ln)
 		fprintf(stderr, "L%d: can't swap, stack too short\n", ln);
 		exit(EXIT_FAILURE);
 	}
-/*
-	t = (*he)->next;
-	(*he)->next = t->next;
-	if (t->next)
-	{
-		t->next->prev = *he;
-	}
-	t->next = *he;
-	(*he)->prev = t;
-	t->prev = NULL;
-	*he = t;*/
+
 	t = (*he)->n;
 	(*he)->n = (*he)->next->n;
 	(*he)->next->n = t;
